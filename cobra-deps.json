@@ -1,0 +1,30 @@
+[
+  {
+    "import_path": "github.com/spf13/cobra@v1.10.2",
+    "synopsis": ""
+  },
+  {
+    "import_path": "github.com/spf13/cobra",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/Aishee/synsec/cmd/synsec-cli",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/CuredPlumbum/philatelist/cmd",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/OliverCardoza/ledger-utils/gobank",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/Sanny_Lebedev/auth/tool/auth-cli",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/Sanny_Lebedev/auth/tool/cli",
+    "synopsis": ""
+  }
+]

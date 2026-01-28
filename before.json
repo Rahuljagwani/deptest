@@ -1,0 +1,20 @@
+[
+  {
+    "project": "github.com/spf13/cobra@v1.10.2",
+    "status": "error",
+    "details": "clone failed: exit status 128",
+    "duration": 0.36773925
+  },
+  {
+    "project": "github.com/spf13/cobra",
+    "status": "pass",
+    "details": "all tests passed",
+    "duration": 3.887213042
+  },
+  {
+    "project": "bitbucket.org/Aishee/synsec/cmd/synsec-cli",
+    "status": "fail",
+    "details": "--- FAIL: TestConfigLoading (0.00s);         \tError Trace:\tacquisition_test.go:28;         \tError:      \t\"can't open ./tests/test.log: open ./tests/test.log: no such file or directory\" does not contain \"failed to yaml decode ./tests/test.log: yaml: unmarshal errors\"",
+    "duration": 38.810339166
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "import_path": "bitbucket.org/adhocmonster/gokit/grpcs",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/adhocmonster/gokit/logger",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/adhocmonster/gokit/server",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/cywarelabs/slog-gin",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/danamas/common-lib/monitoring/opentelemetry",
+    "synopsis": ""
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "import_path": "github.com/sirupsen/logrus@v1.9.4",
+    "synopsis": ""
+  },
+  {
+    "import_path": "github.com/sirupsen/logrus",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/19_fachri/upload-file",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/247devs/utils-golang/google/logrus_formatter",
+    "synopsis": ""
+  },
+  {
+    "import_path": "bitbucket.org/247devs/utils-golang/router/middleware",
+    "synopsis": ""
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "project": "github.com/spf13/cobra@v1.10.2",
+    "status": "error",
+    "details": "clone failed: exit status 128",
+    "duration": 0.360827333
+  },
+  {
+    "project": "github.com/spf13/cobra",
+    "status": "pass",
+    "details": "all tests passed",
+    "duration": 1.714470208
+  },
+  {
+    "project": "bitbucket.org/Aishee/synsec/cmd/synsec-cli",
+    "status": "fail",
+    "details": "--- FAIL: TestConfigLoading (0.00s);         \tError Trace:\tacquisition_test.go:28;         \tError:      \t\"can't open ./tests/test.log: open ./tests/test.log: no such file or directory\" does not contain \"failed to yaml decode ./tests/test.log: yaml: unmarshal errors\"",
+    "duration": 12.306363208
+  },
+  {
+    "project": "bitbucket.org/CuredPlumbum/philatelist/cmd",
+    "status": "fail",
+    "details": "main.go:5:8: no required module provides package bitbucket.org/CuredPlumbum/philatelist/cmd; to add it:\n\tgo get bitbucket.org/CuredPlumbum/philatelist/cmd\ncmd/run.go:12:2: no required module provides ...",
+    "duration": 1.450417167
+  },
+  {
+    "project": "bitbucket.org/OliverCardoza/ledger-utils/gobank",
+    "status": "pass",
+    "details": "all tests passed",
+    "duration": 4.844985833
+  },
+  {
+    "project": "bitbucket.org/Sanny_Lebedev/auth/tool/auth-cli",
+    "status": "fail",
+    "details": "api_key.go:7:2: no required module provides package bitbucket.org/Sanny_Lebedev/auth/app; to add it:\n\tgo get bitbucket.org/Sanny_Lebedev/auth/app\nmain.go:12:2: no required module provides package bitb...",
+    "duration": 3.0099015
+  },
+  {
+    "project": "bitbucket.org/Sanny_Lebedev/auth/tool/cli",
+    "status": "fail",
+    "details": "api_key.go:7:2: no required module provides package bitbucket.org/Sanny_Lebedev/auth/app; to add it:\n\tgo get bitbucket.org/Sanny_Lebedev/auth/app\nmain.go:12:2: no required module provides package bitb...",
+    "duration": 2.077938291
+  }
+]
