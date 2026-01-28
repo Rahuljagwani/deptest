@@ -4,19 +4,53 @@ import (
 	"fmt"
 	"os"
 	"time"
+	"deptest/pkg/compare"
 	"deptest/pkg/discovery"
 	"deptest/pkg/runner"
 )
 
 func main() {
-	handleDiscover()
-	handleTest()
+	if len(os.Args) < 2 {
+		printUsage()
+		os.Exit(1)
+	}
+
+	command := os.Args[1]
+
+	switch command {
+	case "discover":
+		handleDiscover()
+	case "test":
+		handleTest()
+	case "compare":
+		handleCompare()
+	default:
+		fmt.Printf("Unknown command: %s\n", command)
+		printUsage()
+		os.Exit(1)
+	}
+}
+
+func printUsage() {
+	fmt.Println("deptest - Test your Go library changes against real dependents")
+	fmt.Println("\nUsage:")
+	fmt.Println("  deptest discover <module> [-limit N] [-o output.json]")
+	fmt.Println("  deptest test -i dependents.json -o results.json [-timeout 2m]")
+	fmt.Println("  deptest compare results-before.json results-after.json")
+	fmt.Println("\nExamples:")
+	fmt.Println("  deptest discover github.com/sirupsen/logrus -limit 5 -o deps.json")
+	fmt.Println("  deptest test -i deps.json -o results-before.json")
+	fmt.Println("  deptest compare results-before.json results-after.json")
 }
 
 func handleDiscover() {
+	if len(os.Args) < 3 {
+		fmt.Println("Error: module path required")
+		fmt.Println("Usage: deptest discover <module> [-limit N] [-o output.json]")
+		os.Exit(1)
+	}
 
-	// hardcode for now
-	module := "github.com/sirupsen/logrus"
+	module := os.Args[2]
 	limit := 10
 	output := "dependents.json"
 
@@ -115,9 +149,35 @@ func handleTest() {
 		}
 	}
 
-	fmt.Printf("\n=== Summary ===\n")
+	fmt.Printf("\nSummary\n")
 	fmt.Printf("Passed: %d\n", passed)
 	fmt.Printf("Failed: %d\n", failed)
 	fmt.Printf("Errors: %d\n", errors)
 	fmt.Printf("\nResults saved to %s\n", output)
+}
+
+func handleCompare() {
+	if len(os.Args) < 4 {
+		fmt.Println("Error: two result files required")
+		fmt.Println("Usage: deptest compare results-before.json results-after.json")
+		os.Exit(1)
+	}
+
+	beforeFile := os.Args[2]
+	afterFile := os.Args[3]
+
+	before, err := runner.LoadResults(beforeFile)
+	if err != nil {
+		fmt.Printf("Error loading before results: %v\n", err)
+		os.Exit(1)
+	}
+
+	after, err := runner.LoadResults(afterFile)
+	if err != nil {
+		fmt.Printf("Error loading after results: %v\n", err)
+		os.Exit(1)
+	}
+
+	result := compare.Compare(before, after)
+	compare.PrintComparison(result)
 }
