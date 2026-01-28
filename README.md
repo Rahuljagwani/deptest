@@ -111,6 +111,8 @@ This change breaks existing dependents!
 ./deptest compare before.json after.json
 ```
 
+Example outputs can be seen in example_result_jsons
+
 ## Limitations (Prototype)
 
 This is a prototype. Known limitations:
