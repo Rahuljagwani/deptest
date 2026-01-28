@@ -1,6 +1,7 @@
 # deptest
 
 Test your Go library changes against real dependents.
+(This is a prototype for the OpenTelemetry mentorship project proposal. Feedback welcome!)
 
 ## What It Does
 
@@ -111,7 +112,7 @@ This change breaks existing dependents!
 ./deptest compare before.json after.json
 ```
 
-Example outputs can be seen in example_result_jsons
+Example outputs can be seen in [example_result_jsons](https://github.com/Rahuljagwani/deptest/tree/main/example_result_json)
 
 ## Limitations (Prototype)
 
