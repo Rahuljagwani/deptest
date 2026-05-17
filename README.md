@@ -1,7 +1,6 @@
 # deptest
 
 Test your Go library changes against real dependents.
-(This is a prototype for the OpenTelemetry mentorship project proposal. Feedback welcome!)
 
 ## What It Does
 
